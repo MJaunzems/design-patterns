@@ -7,16 +7,17 @@ import lombok.RequiredArgsConstructor;
 
 @Getter
 @RequiredArgsConstructor
-public class Square implements Shape {
+public class Triangle implements Shape {
     private final double side;
 
     @Override
     public double calculateArea() {
-        return side * side;
+        return 0.5 * Math.pow(side, 2);
     }
 
     @Override
     public double calculatePerimeter() {
-        return 4 * side;
+        return Math.sqrt(Math.pow(side, 2) + Math.pow(side, 2));
     }
+
 }
